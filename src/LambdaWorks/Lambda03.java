@@ -1,6 +1,7 @@
-package LambdaDay01;
+package LambdaWorks;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 
 public class Lambda03 {
@@ -24,6 +25,10 @@ public class Lambda03 {
         xkontl(list);
         System.out.println();
         enuzun( list);
+        System.out.println();
+        enuzun2(list);
+        System.out.println();
+        ilkHaricenuzun(list);
     }
 
     private static void daglarharami(List<String> list) {
@@ -120,7 +125,10 @@ public static void xkontl(List<String> list){
                 //findFirst());
     }
     public static void enuzun2(List<String> list){
-        System.out.println(list.stream().sorted(Comparator.comparing(t -> t.toString().length()).reversed()).limit(2));
-        //findFirst());
+        Stream<String> sonIsim = list.stream().sorted(Comparator.comparing(t -> t.toString().length()).reversed()).limit(2);
+        System.out.println(Arrays.toString(sonIsim.toArray()));
+    }
+    public static void ilkHaricenuzun(List<String> list){
+        list.stream().sorted(Comparator.comparing(t -> t.toString().charAt(t.length() - 1))).skip(1).forEach(t->System.out.print(t+" "));
     }
 }

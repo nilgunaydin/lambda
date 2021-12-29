@@ -1,4 +1,4 @@
-package LambdaDay01;
+package LambdaWorks;
 
 import java.util.*;
 

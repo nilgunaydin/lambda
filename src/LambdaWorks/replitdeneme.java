@@ -1,4 +1,4 @@
-package LambdaDay01;
+package LambdaWorks;
 
 public class replitdeneme {
     public static void main(String[] args) {
