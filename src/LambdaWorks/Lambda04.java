@@ -24,6 +24,8 @@ public class Lambda04 {
         System.out.println( ort95byktop(list));
         System.out.println();
         System.out.println( ort95byktop2(list));
+        System.out.println();
+        System.out.println(byk130ort(list));
 //bu classta agirlikli return type calisicaz
 
 
@@ -60,5 +62,7 @@ public static boolean batchOrt110kck(List<TechPro> list){
     public static int ort95byktop2(List<TechPro> list){
         return list.stream().filter(t-> t.getBatchOrt()>95).mapToInt(t-> t.getOgrenciSayisi()).sum();
     }
-
+    public static OptionalDouble byk130ort(List<TechPro> list){
+       return list.stream().filter(t->t.getOgrenciSayisi()>130).mapToInt(t-> t.getBatchOrt()).average();
+    }
 }
