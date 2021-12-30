@@ -8,12 +8,8 @@ public class TechPro {
 
     @Override
     public String toString() {
-        return "TechPro{" +
-                "batch='" + batch + '\'' +
-                ", batchname='" + batchname + '\'' +
-                ", batchOrt=" + batchOrt +
-                ", ogrenciSayisi=" + ogrenciSayisi +
-                '}';
+        return "TechPro" +
+                ", batchname='" + batchname + '\'';
     }
 
     public TechPro(String batch, String batchname, int batchOrt, int ogrenciSayisi) {
