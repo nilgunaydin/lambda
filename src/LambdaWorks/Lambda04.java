@@ -26,6 +26,12 @@ public class Lambda04 {
         System.out.println( ort95byktop2(list));
         System.out.println();
         System.out.println(byk130ort(list));
+        System.out.println();
+       System.out.println(gndzBatchSayisi(list));
+       System.out.println();
+        System.out.println(og130bykort(list));
+        System.out.println();
+       System.out.println(og150azkckort(list));
 //bu classta agirlikli return type calisicaz
 
 
@@ -65,4 +71,20 @@ public static boolean batchOrt110kck(List<TechPro> list){
     public static OptionalDouble byk130ort(List<TechPro> list){
        return list.stream().filter(t->t.getOgrenciSayisi()>130).mapToInt(t-> t.getBatchOrt()).average();
     }
+    public static int gndzBatchSayisi(List<TechPro> list){
+        return (int) list.stream().filter(t-> t.getBatchname().contains("Gunduz")).count();
+
+    }
+    public static OptionalInt og130bykort(List<TechPro> list){
+        return list.stream().filter(t-> t.getOgrenciSayisi()>130).
+                mapToInt(TechPro::getBatchOrt).max();
+
+    }
+
+    public static OptionalInt og150azkckort(List<TechPro> list){
+        return list.stream().filter(t-> t.getOgrenciSayisi()<150).
+                mapToInt(TechPro::getBatchOrt).min();
+
+    }
+
 }
