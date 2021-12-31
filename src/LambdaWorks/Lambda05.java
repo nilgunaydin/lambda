@@ -106,7 +106,7 @@ public class Lambda05 {
 
         return IntStream.iterate(a, t -> t * a).//a a^2 a^3 a^4... x elemanarinin akısı
                 limit(x).//akısdaki ilk x elamanı verir
-                reduce(0,(t,u)->u);
+                reduce(0,Integer::max);
         //skip(x-1);//skip den sonra cıkan elemanları toList ile yazdirilmali
     }
 
