@@ -13,7 +13,7 @@ public class Q2 {
         Collections.sort(list);
         System.out.println(list);
 
-        int sonuc=list.stream().filter(t->list.indexOf(t)>1).map(t->t*t).reduce(0,(t, u)->t+u);
+        int sonuc=list.stream().filter(t->list.indexOf(t)>1).map(t->t*t).reduce(0,Integer::sum);
         System.out.println(sonuc);
     }
 }
